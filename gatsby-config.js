@@ -10,7 +10,7 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: config.siteTitle,
-    siteURL: config.siteURL,
+    siteUrl: config.siteUrl,
     description: config.siteDescription,
   },
 

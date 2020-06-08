@@ -5,7 +5,7 @@ module.exports = {
     'Nghia Lam is a game creator lived in Vietnam, who specialized in developing game/application with various game engine and techniques.',
   siteKeywords:
     'Nghia Lam, nghialam, zZnghialamZz, game developer, game designer, C++, Unity, GameMaker Studio 2',
-  siteURL: 'zznghialamzz.github.io',
+  siteUrl: 'https://zznghialamzz.github.io',
   siteLanguage: 'en_US',
   name: 'Nghia Lam',
   location: 'Vietnam, Ho Chi Minh City',
@@ -49,5 +49,9 @@ module.exports = {
 
   navHeight: 100,
 
-  color: {},
+  colors: {
+    green: '#64ffda',
+    navy: '#0a192f',
+    darkNavy: '#020c1b',
+  },
 };

@@ -3,6 +3,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { GlobalStyle, Theme } from '@styles';
+import { Head, Loader } from '@components';
 
 const { colors, fontSizes, fonts } = Theme;
 
@@ -75,7 +76,7 @@ const Layout = ({ children, location }) => {
           site {
             siteMetadata {
               title
-              siteURL
+              siteUrl
               description
             }
           }
@@ -83,9 +84,24 @@ const Layout = ({ children, location }) => {
       `}
       render={({ site }) => (
         <div id="root">
+          <Head metadata={site.siteMetadata} />
+
           <GlobalStyle />
 
           <SkipToContent href="#content">Skip to Content</SkipToContent>
+
+          {isLoading && isHome ? (
+            <Loader finishLoading={() => setIsLoading(false)} />
+          ) : (
+            <StyledContent>
+              <div id="content">{children}</div>
+            </StyledContent>
+          )}
+
+          {/* This is for temporary*/}
+          <h1>This site is still under construction !!</h1>
+          <p>Please comback again later</p>
+          <p>Or contact me directly at: nghialam12795@gmail.com</p>
         </div>
       )}
     />
