@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import { GlobalStyle, Theme } from '@styles';
+
+const { colors, fontSizes, fonts } = Theme;
 
 // https://medium.com/@chrisfitkin/how-to-smooth-scroll-links-in-gatsby-3dc445299558
 if (typeof window !== 'undefined') {
@@ -9,8 +12,84 @@ if (typeof window !== 'undefined') {
   require('smooth-scroll')('a[href*="#"]');
 }
 
+const SkipToContent = styled.a`
+  position: absolute;
+  top: auto;
+  left: -999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: -99;
+  &:focus,
+  &:active {
+    outline: 0;
+    color: ${colors.green};
+    background-color: ${colors.lightNavy};
+    border-radius: ${Theme.borderRadius};
+    padding: 18px 23px;
+    font-size: ${fontSizes.sm};
+    font-family: ${fonts.FiraCode};
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: ${Theme.transition};
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    overflow: auto;
+    z-index: 99;
+  }
+`;
+
+const StyledContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+`;
+
 const Layout = ({ children, location }) => {
-  return null;
+  const isHome = location.pathname === '/';
+  const [isLoading, setIsLoading] = useState(isHome);
+
+  useEffect(() => {
+    if (isLoading) {
+      return;
+    }
+    if (location.hash) {
+      const id = location.hash.substring(1); // location.hash without the '#'
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView();
+          el.focus();
+        }
+      }, 0);
+    }
+  }, [isLoading]);
+
+  return (
+    <StaticQuery
+      query={graphql`
+        query LayoutQuery {
+          site {
+            siteMetadata {
+              title
+              siteURL
+              description
+            }
+          }
+        }
+      `}
+      render={({ site }) => (
+        <div id="root">
+          <GlobalStyle />
+
+          <SkipToContent href="#content">Skip to Content</SkipToContent>
+        </div>
+      )}
+    />
+  );
 };
 
 Layout.propTypes = {
