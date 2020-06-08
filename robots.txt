@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://zznghialamzz.github.io/sitemap.xml
+Host: https://zznghialamzz.github.io
