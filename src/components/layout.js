@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { GlobalStyle, Theme } from '@styles';
-import { Head, Loader, Nav } from '@components';
+import { Head, Loader, Nav, Email } from '@components';
 
 const { colors, fontSizes, fonts } = Theme;
 
@@ -95,6 +95,8 @@ const Layout = ({ children, location }) => {
           ) : (
             <StyledContent>
               <Nav isHome={isHome} />
+
+              <Email isHome={isHome} />
 
               <div id="content">{children}</div>
             </StyledContent>
