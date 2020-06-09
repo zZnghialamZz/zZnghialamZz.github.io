@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { GlobalStyle, Theme } from '@styles';
-import { Head, Loader } from '@components';
+import { Head, Loader, Nav } from '@components';
 
 const { colors, fontSizes, fonts } = Theme;
 
@@ -94,6 +94,8 @@ const Layout = ({ children, location }) => {
             <Loader finishLoading={() => setIsLoading(false)} />
           ) : (
             <StyledContent>
+              <Nav isHome={isHome} />
+
               <div id="content">{children}</div>
             </StyledContent>
           )}
@@ -102,6 +104,7 @@ const Layout = ({ children, location }) => {
           <h1>This site is still under construction !!</h1>
           <p>Please comback again later</p>
           <p>Or contact me directly at: nghialam12795@gmail.com</p>
+          {/* End Temporary */}
         </div>
       )}
     />
