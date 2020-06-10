@@ -41,7 +41,7 @@ const StyledSocialLink = styled.a`
 `;
 
 const StyledMetadata = styled.div`
-  font-family: ${fonts.SFMono};
+  font-family: ${fonts.JetBrainsMono};
   font-size: ${fontSizes.xs};
   line-height: 1;
 `;
@@ -114,7 +114,7 @@ const Footer = () => {
           rel="nofollow noopener noreferrer">
           <div>Game Lover &amp; Game Creator</div>
 
-          {githubInfo.stars && githubInfo.forks && (
+          {/* {githubInfo.stars && githubInfo.forks && (
             <StyledGitHubInfo>
               <span>
                 <FormattedIcon name="Star" />
@@ -125,7 +125,7 @@ const Footer = () => {
                 <span>{githubInfo.forks.toLocaleString()}</span>
               </span>
             </StyledGitHubInfo>
-          )}
+          )} */}
         </StyledGitHubLink>
       </StyledMetadata>
     </StyledContainer>

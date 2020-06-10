@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import anime from 'animejs';
+import { IconLoader } from '@components/icons'
 import { Theme, Mixins } from '@styles';
 
 const { colors } = Theme;
@@ -87,7 +88,7 @@ const Loader = ({ finishLoading }) => {
     <StyledContainer className="loader">
       <Helmet bodyAttributes={{ class: `hidden` }} />
 
-      <StyledLogo isMounted={isMounted}>{/* <IconLoader /> */}</StyledLogo>
+      <StyledLogo isMounted={isMounted}><IconLoader /></StyledLogo>
     </StyledContainer>
   );
 };
