@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { Layout } from '@components';
+import { Layout, Intro } from '@components';
 import { Main } from '@styles';
 
 const StyledMainContainer = styled(Main)`
@@ -11,18 +11,11 @@ const StyledMainContainer = styled(Main)`
 
 const IndexPage = ({ location, data }) => (
   <Layout location={location}>
-    <StyledMainContainer className="MainContents"></StyledMainContainer>
+    <StyledMainContainer className="MainContents">
+      <Intro data={data.intro.edges} />
+    </StyledMainContainer>
   </Layout>
 );
-
-// export default function Home() {
-//   return (
-//     <div>
-//       <h1>This website is still under contruction !!</h1>
-//       <p>Please wait or contact Nghia Lam directly at: nghialam12795@gmail.com</p>
-//     </div>
-//   );
-// }
 
 IndexPage.propTypes = {
   location: PropTypes.object.isRequired,
@@ -30,3 +23,21 @@ IndexPage.propTypes = {
 };
 
 export default IndexPage;
+
+export const pageQuery = graphql`
+  {
+    intro: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/intro/" } }) {
+      edges {
+        node {
+          frontmatter {
+            title
+            name
+            subtitle
+            buttonText
+          }
+          html
+        }
+      }
+    }
+  }
+`;

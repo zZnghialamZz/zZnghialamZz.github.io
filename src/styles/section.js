@@ -8,3 +8,5 @@ const Section = styled.section`
 
   ${Media.tablet`padding: 100px 0;`};
 `;
+
+export default Section;
