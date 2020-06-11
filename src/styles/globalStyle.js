@@ -33,8 +33,8 @@ const GlobalStyle = createGlobalStyle`
     color: ${colors.slate};
     line-height: 1.5;
     font-family: ${fonts.JetBrainsMono};
-    font-size: ${fontSizes.lg};
-    ${Media.phablet`font-size: ${fontSizes.lg};`}
+    font-size: ${fontSizes.md};
+    ${Media.phablet`font-size: ${fontSizes.md};`}
 
     &.hidden {
       overflow: hidden;

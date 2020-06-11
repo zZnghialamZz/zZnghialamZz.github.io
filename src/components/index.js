@@ -9,3 +9,5 @@ export { default as Social } from './social';
 export { default as Footer } from './footer';
 export { default as Intro } from './sections/intro';
 export { default as About } from './sections/about';
+export { default as Jobs } from './sections/jobs';
+export { default as Featured } from './sections/featured';

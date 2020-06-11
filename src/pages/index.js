@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { Layout, Intro, About } from '@components';
+import { Layout, Intro, About, Jobs, Featured } from '@components';
 import { Main } from '@styles';
 
 const StyledMainContainer = styled(Main)`
@@ -14,6 +14,8 @@ const IndexPage = ({ location, data }) => (
     <StyledMainContainer className="MainContents">
       <Intro data={data.intro.edges} />
       <About data={data.about.edges} />
+      <Jobs data={data.jobs.edges} />
+      <Featured data={data.featured.edges} />
     </StyledMainContainer>
   </Layout>
 );
@@ -53,6 +55,46 @@ export const pageQuery = graphql`
               }
             }
             skills
+          }
+          html
+        }
+      }
+    }
+    jobs: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/jobs/" } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            company
+            location
+            range
+            url
+          }
+          html
+        }
+      }
+    }
+    featured: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/featured/" } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            cover {
+              childImageSharp {
+                fluid(maxWidth: 700, quality: 90, traceSVG: { color: "#64ffda" }) {
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                }
+              }
+            }
+            tech
+            github
+            external
           }
           html
         }
