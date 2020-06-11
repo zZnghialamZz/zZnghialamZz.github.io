@@ -5,4 +5,6 @@ subtitle: 'I work on Game Development'
 buttonText: 'Get In Touch'
 ---
 
-Working in professional game development environment for over 3 years as Technical Artist, I am now learning and working to become a game developer - game designer. 
+Technical Artist with over 3 year of experiences, involved into many big titles such as Need For Speed, CSR Racing 2, Real Racing 3, etc...
+
+I am now learning and working to become a game developer - game designer. 
