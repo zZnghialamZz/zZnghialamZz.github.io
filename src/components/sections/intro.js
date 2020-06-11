@@ -22,7 +22,7 @@ const StyledOverline = styled.h1`
   color: ${colors.green};
   margin: 0 0 20px 3px;
   font-size: ${fontSizes.md};
-  font-family: ${fonts.SFMono};
+  font-family: ${fonts.JetBrainsMono};
   font-weight: normal;
   ${Media.desktop`font-size: ${fontSizes.sm};`};
   ${Media.tablet`font-size: ${fontSizes.smish};`};
@@ -39,13 +39,13 @@ const StyledTitle = styled.h2`
 `;
 
 const StyledSubtitle = styled.h3`
-  font-size: 80px;
+  font-size: 60px;
   line-height: 1.1;
   color: ${colors.slate};
-  ${Media.desktop`font-size: 70px;`};
-  ${Media.tablet`font-size: 60px;`};
-  ${Media.phablet`font-size: 50px;`};
-  ${Media.phone`font-size: 40px;`};
+  ${Media.desktop`font-size: 50px;`};
+  ${Media.tablet`font-size: 40px;`};
+  ${Media.phablet`font-size: 30px;`};
+  ${Media.phone`font-size: 20px;`};
 `;
 
 const StyledDescription = styled.div`

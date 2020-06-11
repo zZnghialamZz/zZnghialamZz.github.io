@@ -31,9 +31,9 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     background-color: ${colors.navy};
     color: ${colors.slate};
-    line-height: 1.3;
+    line-height: 1.5;
     font-family: ${fonts.JetBrainsMono};
-    font-size: ${fontSizes.xl};
+    font-size: ${fontSizes.lg};
     ${Media.phablet`font-size: ${fontSizes.lg};`}
 
     &.hidden {

@@ -8,3 +8,4 @@ export { default as Email } from './email';
 export { default as Social } from './social';
 export { default as Footer } from './footer';
 export { default as Intro } from './sections/intro';
+export { default as About } from './sections/about';

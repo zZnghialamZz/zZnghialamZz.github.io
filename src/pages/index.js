@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { Layout, Intro } from '@components';
+import { Layout, Intro, About } from '@components';
 import { Main } from '@styles';
 
 const StyledMainContainer = styled(Main)`
@@ -13,6 +13,7 @@ const IndexPage = ({ location, data }) => (
   <Layout location={location}>
     <StyledMainContainer className="MainContents">
       <Intro data={data.intro.edges} />
+      <About data={data.about.edges} />
     </StyledMainContainer>
   </Layout>
 );
@@ -34,6 +35,24 @@ export const pageQuery = graphql`
             name
             subtitle
             buttonText
+          }
+          html
+        }
+      }
+    }
+    about: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/about/" } }) {
+      edges {
+        node {
+          frontmatter {
+            title
+            avatar {
+              childImageSharp {
+                fluid(maxWidth: 700, quality: 90, traceSVG: { color: "#64ffda" }) {
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                }
+              }
+            }
+            skills
           }
           html
         }
