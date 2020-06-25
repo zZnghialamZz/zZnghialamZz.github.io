@@ -19,7 +19,7 @@ module.exports = {
     },
     {
       name: 'Linkedin',
-      url: 'https://www.linkedin.com/in/nghia-lam-8115a0155/',
+      url: 'https://www.linkedin.com/in/nghialamzz/',
     },
     {
       name: 'Twitter',

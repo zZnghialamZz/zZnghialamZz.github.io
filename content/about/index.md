@@ -21,3 +21,5 @@ Shortly after graduated from [AUT](https://www.aut.ac.nz/), I joined [Glass Egg]
 Presently, I'm deepening and working as a Game Developer with various interesting projects daily.
 
 Below are a few tools/technologies I have been using:
+
+<!-- Experienced Technical Manager with a demonstrated history of working in the computer games industry. Skilled in MEL, C#, Research and Development (R&D), Maya, and Programming. Strong engineering professional with a Bachelor of Service Science focused in Computer/Information Technology Administration and Management from Auckland University of Technology.  -->
