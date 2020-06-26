@@ -32,7 +32,7 @@ const Mixins = {
     &:hover,
     &:active,
     &:focus {
-      color: ${colors.green};
+      color: ${colors.lightgreen};
       outline: 0;
     }
   `,
@@ -44,17 +44,17 @@ const Mixins = {
     position: relative;
     transition: ${Theme.transition};
     cursor: pointer;
-    color: ${colors.green};
+    color: ${colors.lightgreen};
     &:hover,
     &:focus,
     &:active {
-      color: ${colors.green};
+      color: ${colors.lightgreen};
       outline: 0;
       &:after {
         width: 100%;
       }
       & > * {
-        color: ${colors.green} !important;
+        color: ${colors.lightgreen} !important;
         transition: ${Theme.transition};
       }
     }
@@ -65,7 +65,7 @@ const Mixins = {
       height: 1px;
       position: relative;
       bottom: 0.37em;
-      background-color: ${colors.green};
+      background-color: ${colors.lightgreen};
       transition: ${Theme.transition};
       opacity: 0.5;
     }
@@ -94,9 +94,9 @@ const Mixins = {
   `,
 
   bigButton: css`
-    color: ${colors.green};
+    color: ${colors.lightgreen};
     background-color: transparent;
-    border: 1px solid ${colors.green};
+    border: 1px solid ${colors.lightgreen};
     border-radius: ${Theme.borderRadius};
     padding: 1.25rem 1.75rem;
     font-size: ${fontSizes.sm};
@@ -108,7 +108,7 @@ const Mixins = {
     &:hover,
     &:focus,
     &:active {
-      background-color: ${colors.transGreen};
+      background-color: ${colors.transLightGreen};
     }
     &:after {
       display: none !important;
@@ -145,7 +145,7 @@ const Mixins = {
         content: '▹';
         position: absolute;
         left: 0;
-        color: ${colors.green};
+        color: ${colors.yellow};
       }
     }
   `,

@@ -47,7 +47,7 @@ const Skill = styled.li`
     content: '▹';
     position: absolute;
     left: 0;
-    color: ${colors.green};
+    color: ${colors.yellow};
     font-size: ${fontSizes.sm};
     line-height: 12px;
   }
@@ -113,7 +113,7 @@ const StyledAvatarLink = styled.a`
     mix-blend-mode: screen;
   }
   &:after {
-    border: 2px solid ${colors.green};
+    border: 2px solid ${colors.lightgreen};
     top: 20px;
     left: 20px;
     z-index: -1;

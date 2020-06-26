@@ -148,7 +148,7 @@ const StyledJobTitle = styled.h4`
 `;
 
 const StyledCompany = styled.span`
-  color: ${colors.green};
+  color: ${colors.lightgreen};
 `;
 
 const StyledJobDetails = styled.h5`

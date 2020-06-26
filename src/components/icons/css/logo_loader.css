@@ -1,0 +1,77 @@
+svg .logo_loader-1 {
+  stroke-dashoffset: 392.2615966796875px;
+  stroke-dasharray: 392.2615966796875px;
+  -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
+          transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
+}
+
+svg.active .logo_loader-1 {
+  stroke-dashoffset: 0;
+}
+
+svg .logo_loader-2 {
+  stroke-dashoffset: 392.2615966796875px;
+  stroke-dasharray: 392.2615966796875px;
+  -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.12s;
+          transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.12s;
+}
+
+svg.active .logo_loader-2 {
+  stroke-dashoffset: 0;
+}
+
+svg .logo_loader-3 {
+  stroke-dashoffset: 84.71258544921875px;
+  stroke-dasharray: 84.71258544921875px;
+  -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.24s;
+          transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.24s;
+}
+
+svg.active .logo_loader-3 {
+  stroke-dashoffset: 0;
+}
+
+svg .logo_loader-4 {
+  stroke-dashoffset: 141.03236389160156px;
+  stroke-dasharray: 141.03236389160156px;
+  -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.36s;
+          transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.36s;
+}
+
+svg.active .logo_loader-4 {
+  stroke-dashoffset: 0;
+}
+
+svg .logo_loader-5 {
+  stroke-dashoffset: 128.41706085205078px;
+  stroke-dasharray: 128.41706085205078px;
+  -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.48s;
+          transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.48s;
+}
+
+svg.active .logo_loader-5 {
+  stroke-dashoffset: 0;
+}
+
+svg .logo_loader-6 {
+  stroke-dashoffset: 91.09545135498047px;
+  stroke-dasharray: 91.09545135498047px;
+  -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.6s;
+          transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.6s;
+}
+
+svg.active .logo_loader-6 {
+  stroke-dashoffset: 0;
+}
+
+svg .logo_loader-7 {
+  stroke-dashoffset: 1030px;
+  stroke-dasharray: 1030px;
+  -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.72s;
+          transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0.72s;
+}
+
+svg.active .logo_loader-7 {
+  stroke-dashoffset: 0;
+}
+

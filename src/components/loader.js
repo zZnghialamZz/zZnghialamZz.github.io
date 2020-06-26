@@ -10,7 +10,7 @@ const { colors } = Theme;
 
 const StyledContainer = styled.div`
   ${Mixins.flexCenter};
-  background-color: ${colors.darkNavy};
+  background-color: ${colors.navy};
   position: fixed;
   width: 100%;
   height: 100%;
@@ -33,9 +33,6 @@ const StyledLogo = styled.div`
     margin: 0 auto;
     fill: none;
     user-select: none;
-    #B {
-      opacity: 0;
-    }
   }
 `;
 
@@ -47,32 +44,15 @@ const Loader = ({ finishLoading }) => {
 
     loader
       .add({
-        targets: '#logo path',
-        delay: 300,
-        duration: 1500,
+        targets: '#logo path, #logo rect',
+        duration: 300,
         easing: 'easeInOutQuart',
         strokeDashoffset: [anime.setDashoffset, 0],
       })
       .add({
-        targets: '#logo #B',
-        duration: 700,
-        easing: 'easeInOutQuart',
-        opacity: 1,
-      })
-      .add({
         targets: '#logo',
-        delay: 500,
-        duration: 300,
-        easing: 'easeInOutQuart',
-        opacity: 0,
-        scale: 0.1,
-      })
-      .add({
-        targets: '.loader',
-        duration: 200,
-        easing: 'easeInOutQuart',
-        opacity: 0,
-        zIndex: -1,
+        duration: 2000,
+        easing: 'easeInOutQuart'
       });
   };
 
