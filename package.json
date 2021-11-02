@@ -1,14 +1,23 @@
 {
   "name": "personalsite",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "description": "Nghia Lam's website",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview"
   },
+  "author": "Nghia Lam <nghialam12795@gmail.com>",
   "dependencies": {
+    "@chakra-ui/react": "^1.6.10",
+    "@emotion/react": "^11.5.0",
+    "@emotion/styled": "^11.3.0",
+    "framer-motion": "^4.1.17",
+    "hover-effect": "^1.1.0",
     "react": "^17.0.0",
-    "react-dom": "^17.0.0"
+    "react-dom": "^17.0.0",
+    "sass": "^1.43.4",
+    "swiper": "^7.2.0"
   },
   "devDependencies": {
     "@types/react": "^17.0.0",
